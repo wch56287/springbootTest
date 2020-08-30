@@ -1,0 +1,10 @@
+server:
+  port: 9011
+  servlet:
+    context-path: /api
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.200.128:3306/test001?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
