@@ -16,6 +16,7 @@ import java.util.List;
  */
 @Service
 public class UserServiceImpl implements UserService {
+
     @Autowired
     private UserMapper userMapper;
 
@@ -27,22 +28,23 @@ public class UserServiceImpl implements UserService {
         List<User> users = userMapper.selectAll();
         return users;
     }
+
     @Override
     public User findById(Integer id) {
         return userMapper.selectByPrimaryKey(id);
     }
+
     @Override
-    @Transactional
     public void add(User user) {
         userMapper.insert(user);
     }
+
     @Override
-    @Transactional
     public void update(User user) {
         userMapper.updateByPrimaryKeySelective(user);
     }
+
     @Override
-    @Transactional
     public void delById(Integer id) {
         userMapper.deleteByPrimaryKey(id);
     }
