@@ -7,6 +7,7 @@ import com.ruantong.springboottest001.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -18,7 +19,8 @@ import java.util.List;
 @RequestMapping("/api")
 public class UserController {
 
-    @Autowired
+//    @Autowired
+    @Resource
     private UserService userService;
 
     /**
